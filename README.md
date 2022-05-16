@@ -18,16 +18,16 @@ pour compiler en 64 bits, voilà la commande :
 
 pour se simplifier le processus de façon générale, les 3 scripts bash présents dans ce dépôt permettent de compiler un programme C selon le système de destination de l'exécutable :  
 - make_lnx : va compiler et créer un exécutable pour Linux en utilisant la commande gcc. l'exécutable prendra le nom de 'build_lnx' et sera dans le même dossier que le programme source.  
-
-    ./make_lnx nom_du_programme.c
+    
+        ./make_lnx nom_du_programme.c
     
 - make_win : va compiler et créer un exécutable pour Windows en utilisant mingw-w64. l'exécutable prendre le nom de 'build_win.exe' et sera dans le même dossier que le programme source.  
-
-    ./make_win nom_du_programme.c
+    
+        ./make_win nom_du_programme.c
     
 - make_all : va compiler et créer un exécutable pour Linux & Windows en utilisant gcc & mingw-w64. les exécutables prendront respectivement les noms de 'build_lnx' et 'build_win.exe' et seront dans le même dossier que le programme source.
 
-    ./make_all nom_du_programme.c
+        ./make_all nom_du_programme.c
 
 et voilà ! ...  
 
