@@ -1,0 +1,5 @@
+#/bin/bash
+gcc -Wall -o prebuild.o -c $1
+gcc -o build_lnx prebuild.o
+rm prebuild.o
+

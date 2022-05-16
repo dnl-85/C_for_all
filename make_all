@@ -1,0 +1,11 @@
+#/bin/bash
+
+echo "... compilation de la version linux ..."
+gcc -Wall -o prebuild.o -c $1
+gcc -o build_lnx prebuild.o
+rm prebuild.o
+echo "... version linux générée !"
+
+echo "... compilation de la version windows ..."
+x86_64-w64-mingw32-gcc -o build_win.exe $1
+echo "... version windows générée !"
