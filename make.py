@@ -57,7 +57,7 @@ def dossier_sortie(nom_projet):
 
 def compile_linux(dossier, projet):
     print("... compilation de la version linux 64bits ...")
-    os.system(f"gcc -Wall -o {dossier}/{projet}_build_lnx64 {projet}")
+    os.system(f"gcc -Wall -o {dossier}/{projet}_build_lnx64 {projet} -lm")
     print("... version linux 64bits générée ...")
 
 def compile_win32(dossier, projet):
