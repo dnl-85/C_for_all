@@ -1,11 +1,15 @@
 #/bin/bash
 
-echo "... compilation de la version linux ..."
+echo "... compilation de la version linux 64bits ..."
 gcc -Wall -o prebuild.o -c $1
-gcc -o build_lnx prebuild.o
+gcc -o $1_build_lnx64 prebuild.o
 rm prebuild.o
-echo "... version linux générée !"
+echo "... version linux 64bits générée !"
 
-echo "... compilation de la version windows ..."
-x86_64-w64-mingw32-gcc -o build_win.exe $1
-echo "... version windows générée !"
+echo "... compilation de la version windows 64bits ..."
+x86_64-w64-mingw32-gcc -o $1_build_win64.exe $1
+echo "... version windows 64bits générée !"
+
+echo "... compilation de la version windows 32bits ..."
+x86_64-w64-mingw32-gcc -o $1_build_win32.exe $1
+echo "... version windows 32bits générée !"
