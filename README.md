@@ -23,22 +23,14 @@ pour compiler en 64 bits, voilà la commande :
 
 -----
 
-pour se simplifier le processus de façon générale, les 3 scripts bash présents dans ce dépôt permettent de compiler un programme C selon le système de destination de l'exécutable :  
-- make_lnx : va compiler et créer un exécutable pour Linux en utilisant la commande gcc. l'exécutable prendra le nom de *'nom-du-programme.c_build_lnx64'* et sera dans le même dossier que le programme source.  
-    
-        ./make_lnx nom_du_programme.c
-    
-- make_win : va compiler et créer un exécutable pour Windows en utilisant mingw-w64. l'exécutable prendre le nom de *'nom-du-programme.c_build_win64.exe'* et sera dans le même dossier que le programme source.  
-    
-        ./make_win nom_du_programme.c
-    
-- make_all : va compiler et créer un exécutable pour Linux & Windows en utilisant gcc, mingw-w64 et mingw. les exécutables prendront respectivement les noms de *'nom-du-programme.c_build_lnx64'*, *'nom-du-programme.c_build_win64.exe'* et *'nom-du-programme.c_build_win32.exe'* et seront dans le même dossier que le programme source.
+pour se simplifier le processus de façon générale, le script bash présent dans ce dépôt permet de compiler un programme C pour Linux, Windows 32bits et Windows 64bits :  
+- make_all va compiler et créer un exécutable pour Linux & Windows en utilisant gcc, mingw-w64 et mingw. les exécutables prendront respectivement les noms de *'nom-du-programme.c_build_lnx64'*, *'nom-du-programme.c_build_win64.exe'* et *'nom-du-programme.c_build_win32.exe'* et seront dans un dossier à part. le nom du dossier va se générer automatiquement en portant le nom du programme source C, ainsi que la date et l'heure du 'build'.  
 
         ./make_all nom_du_programme.c
 
 pour vérifier le résultat et l'exécutabilité de votre programme pour windows sous linux, utilisez Wine, qui est juste excellent pour ça !  
 
-et voilà ! ...  
+et voilà ! ... d'une pierre , 3 coups !
 
 Daniel, le 17/05/2022.  
 
