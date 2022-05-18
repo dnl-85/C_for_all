@@ -32,9 +32,11 @@ pour se simplifier le processus de façon générale, les 3 scripts bash présen
     
         ./make_win nom_du_programme.c
     
-- make_all : va compiler et créer un exécutable pour Linux & Windows en utilisant gcc & mingw-w64. les exécutables prendront respectivement les noms de *'nom-du-programme.c_build_lnx64'* et *'nom-du-programme.c_build_win64.exe'* et seront dans le même dossier que le programme source.
+- make_all : va compiler et créer un exécutable pour Linux & Windows en utilisant gcc, mingw-w64 et mingw. les exécutables prendront respectivement les noms de *'nom-du-programme.c_build_lnx64'*, *'nom-du-programme.c_build_win64.exe'* et *'nom-du-programme.c_build_win32.exe' et seront dans le même dossier que le programme source.
 
         ./make_all nom_du_programme.c
+
+pour vérifier le résultat et l'exécutabilité de votre programme pour windows sous linux, utilisez Wine, qui est juste excellent pour ça !  
 
 et voilà ! ...  
 
