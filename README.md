@@ -49,7 +49,7 @@ le script 'make.py' peut être modifié et adapté au besoin de chacun.
 
 pour finir et pour vérifier le résultat et l'exécutabilité de votre programme pour windows sous linux, je vous recommande d'utiliser Wine, qui est juste excellent pour ça !  
 
-et voilà ! ... d'une pierre , 3 coups !
+et voilà ! ...  
 
 Daniel, le 17/05/2022.  
 
