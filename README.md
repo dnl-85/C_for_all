@@ -1,10 +1,17 @@
 # Comment compiler un programme en C en executable pour Windows en 32bits ou 64bits sous Linux
-### ... et comment se faire un script pour générer sans effort un exécutable depuis un programme C ...
+### ... et comment se faire un script pour générer sans effort un exécutable depuis un programme C sous Linux ...
 -----
 
-pour compiler un programme exécutable pour windows sous un système linux, il faut premièrement installer mingw-w64 sous Linux via la commande bash suivante :  
+pour compiler un programme exécutable pour windows sous un système linux, il faut premièrement installer mingw-w64 et gcc sous Linux via les commandes bash suivantes :  
     
     sudo apt-get install mingw-w64
+    sudo apt-get install gcc
+    
+en cas de doute, il est possible de vérifier la présence de ces commandes avant de continuer :
+
+    gcc --version
+    i686-w64-mingw32-gcc --version
+    x86_64-w64-mingw32-gcc --version
 
 pour compiler en 32 bits, voilà la commande :  
     
