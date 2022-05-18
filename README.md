@@ -38,7 +38,7 @@ par exemple, si votre fichier source s'appelle 'essai.c' et que vous voulez comp
 
     python3 make.py -all essai.c
 
-NOTE : dans le cas d'un nouveau projet, inutile de spécifier le suffixe du fichier, donnez juste le nomde votre programme; ce script se chargera du reste... exemple:  
+NOTE : dans le cas d'un nouveau projet, inutile de spécifier le suffixe du fichier, donnez juste le nom de votre programme; ce script se chargera du reste... exemple:  
 
     python3 make.py -start nouveau
 
