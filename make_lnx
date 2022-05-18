@@ -1,4 +1,0 @@
-#/bin/bash
-gcc -Wall -o prebuild.o -c $1
-gcc -o $1_build_lnx64 prebuild.o
-rm prebuild.o
