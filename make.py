@@ -37,6 +37,8 @@ def main(options):
         info()
     elif "-start" in options:
         start_projet(f"{options[2]}")
+    elif "-install" in options:
+        install_progs()
     else:
         print("... PAS D'OPTIONS SPECIFIEES! ...")
 
@@ -75,6 +77,14 @@ def copie_original(dossier, projet):
     os.system(f"cp -u {projet} {dossier}")
     print("... OK! ...")
 
+def install_progs():
+    print("... installation de gcc et mingw si absents ...")
+    print(" > 1. installation de gcc...")
+    os.system("sudo apt-get install gcc")
+    print(" > 2. installation de mingw-w64...")
+    os.system("sudo apt-get install mingw-w64")
+    print("... OK! ...")
+
 ### la fonction start_projet contient le code initial si l'on souhaite démarrer un projet, ce code
 ### initial peut être changé selon les besoins les plus courants de chacun... ceci est ma version ;)
 def start_projet(projet):
@@ -108,7 +118,8 @@ commandes :
 >  python3 make.py -w64 [programme.c]    : va compiler le programme C pour Windows en 64bits uniquement.
 >  python3 make.py -h                    : va afficher ce message d'aide.
 >  python3 make.py -i                    : va afficher les informations concernant ce script.
->  python3 make.py -start [projet]       : va créer un nouveau programme C. 
+>  python3 make.py -start [projet]       : va créer un nouveau programme C.
+>  python3 make.py -install              : va installer gcc et mingw-w64 sur votre système.
 
 NOTE : inutile de spécifier le nom du fichier source en C entre [.] !
 par exemple, si votre fichier source s'appelle 'essai.c' et que vous voulez compiler pour tous les systèmes,
