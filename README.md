@@ -32,6 +32,7 @@ pour se simplifier le processus de façon générale, le script en Python3 prés
     >  python3 make.py -h                    : va afficher ce message d'aide.
     >  python3 make.py -i                    : va afficher les informations concernant ce script.
     >  python3 make.py -start [projet]       : va créer un nouveau programme C. 
+    >  python3 make.py -install              : va installer gcc et mingw-w64 sur votre système.
 
 NOTE : inutile de spécifier le nom du fichier source en C entre [.] !  
 par exemple, si votre fichier source s'appelle 'essai.c' et que vous voulez compiler pour tous les systèmes, il suffit de taper :  
