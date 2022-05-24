@@ -76,6 +76,12 @@ un dossier 'nouveau' va apparaitre et contenir :
 - et pour finir mks.sh contient le script de compilation, se basant sur gcc et mingw comme décrit au début de cet article.  
 
 concernant le script mks.sh, à chaque compilation, il va généré automatiquement une archive zip contenant l'intégralité du projet dans sa forme telle que d'écrite quelques lignes plus haut, et contenant bien sûr les exécutables dans le dossier build/.  
+pour ça, il suffit de taper la commande :
+
+    ./mks.sh
+    
+depuis un terminal pointant dans la racine du projet.  
+note : cette commande est exclusive à ce projet, si vous changez le nom du programme 'nouveau.c' pour un autre, la commande doit être modifiée en conséquence sinon elle ne fonctionnera plus...  
 
 -----
 
