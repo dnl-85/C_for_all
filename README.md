@@ -78,7 +78,7 @@ un dossier 'nouveau' va apparaitre et contenir :
 
 comme j'utilise Notepadqq (Notepad++) comme editeur de code, mon script fini par ouvrir le programme c, le header h et README.md dans cette application, chacun dans un onglet séparé.  
 
-concernant le script mks.sh, à chaque compilation, il va généré automatiquement une archive zip contenant l'intégralité du projet dans sa forme telle que d'écrite quelques lignes plus haut, et contenant bien sûr les exécutables dans le dossier build/.  
+concernant le script mks.sh, à chaque compilation, il va générer automatiquement une archive zip contenant l'intégralité du projet dans sa forme telle que d'écrite quelques lignes plus haut, et contenant bien sûr les exécutables dans le dossier build/.  
 pour ça, il suffit de taper la commande :
 
     ./mks.sh
