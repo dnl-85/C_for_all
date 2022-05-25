@@ -56,7 +56,8 @@ d'emblée, le programme .c présent dans le projet va contenir une fonction main
 
     > ./make.sh nouveau
 
-un dossier 'nouveau' va apparaitre et contenir :
+le terminal va changer de répertoire de travail et passer directement dans le dossier fraichement créé.  
+un dossier 'nouveau' va apparaitre et contenir :  
 
     nouveau/
         |---- build/
@@ -74,6 +75,8 @@ un dossier 'nouveau' va apparaitre et contenir :
 - nouveau.c contiendra le programme c.  
 - README.md contiendra la documentation du programme.  
 - et pour finir mks.sh contient le script de compilation, se basant sur gcc et mingw comme décrit au début de cet article.  
+
+comme j'utilise Notepadqq (Notepad++) comme editeur de code, mon script fini par ouvrir le programme c, le header h et README.md dans cette application, chacun dans un onglet séparé.  
 
 concernant le script mks.sh, à chaque compilation, il va généré automatiquement une archive zip contenant l'intégralité du projet dans sa forme telle que d'écrite quelques lignes plus haut, et contenant bien sûr les exécutables dans le dossier build/.  
 pour ça, il suffit de taper la commande :
