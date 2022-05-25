@@ -97,7 +97,8 @@ echo '... project is READY ! ...'
 # maintenant nous pouvons commencer
 # now we can work
 cd $1
-xfce4-terminal --command="notepadqq --new-window $1.c --new-window embedded/$1.h --new-window README.md"
+xfce4-terminal --command="nohup notepadqq --new-window $1.c --new-window embedded/$1.h --new-window README.md"
+rm nohup.out
 echo "... this terminal will clear screen in 10 seconds ..."
 sleep 10
 clear
