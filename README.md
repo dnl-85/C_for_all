@@ -60,31 +60,33 @@ le terminal va changer de répertoire de travail et passer directement dans le d
 un dossier 'nouveau' va apparaitre et contenir :  
 
     nouveau/
-        |---- build/
-        |---- embedded/
-        |         +---- nouveau.h
-        |---- license/
-        |         +---- LICENSE
-        + nouveau.c
-        + README.md
-        + mks.sh
+        |---- exe/
+        |---- inc/
+        |        +---- nouveau.h
+        |---- doc/
+        |        +---- LICENSE
+        |        +---- README.md
+        |---- src/
+        |        +---- nouveau.c
+        |---- pack/
+        + Makefile.sh
 
-- le dossier 'build/' va contenir les futurs compilations du projet.  
-- le dossier 'embedded/' va contenir à minima le header .h du programme, et peut être modifié à la guise du développeur.  
-- le dossier 'license/' va contenir à minima une license MIT avec le nom du login du pc du développeur et l'heure de création du projet.  
-- nouveau.c contiendra le programme c.  
-- README.md contiendra la documentation du programme.  
-- et pour finir mks.sh contient le script de compilation, se basant sur gcc et mingw comme décrit au début de cet article.  
+- le dossier 'exe/' va contenir les futurs compilations (exécutables) du projet.  
+- le dossier 'inc/' va contenir à minima le header .h du programme, et peut être modifié à la guise du développeur.  
+- le dossier 'doc/' va contenir à minima une license MIT avec le nom du login du pc du développeur et l'heure de création du projet ainsi que la documentation du programme.  
+- le dossier 'src/' va contenir à minima le programme .c, lui même contenant la fonction principale 'main'.  
+- le dossier 'pack/' va contenir une sauvegarde du projet, empaqueté dans une archive .zip, et ceci sera créé ou remis à jour à chaque compilation du projet.  
+- et pour finir Makefile.sh contient le script de compilation, se basant sur gcc et mingw comme décrit au début de cet article.  
 
 comme j'utilise Notepadqq (Notepad++) comme editeur de code, mon script fini par ouvrir le programme c, le header h et README.md dans cette application, chacun dans un onglet séparé.  
 
-concernant le script mks.sh, à chaque compilation, il va générer automatiquement une archive zip contenant l'intégralité du projet dans sa forme telle que d'écrite quelques lignes plus haut, et contenant bien sûr les exécutables dans le dossier build/.  
+concernant le script Makefile.sh : à chaque compilation, il va générer automatiquement une archive zip contenant l'intégralité du projet dans sa forme telle que d'écrite quelques lignes plus haut, et contenant bien sûr les exécutables dans le dossier exe/.  
 pour ça, il suffit de taper la commande :
 
-    ./mks.sh
+    ./Makefile.sh
     
 depuis un terminal pointant dans la racine du projet.  
-note : cette commande est exclusive à ce projet, si vous changez le nom du programme 'nouveau.c' pour un autre, la commande doit être modifiée en conséquence sinon elle ne fonctionnera plus...  
+note : cette commande est exclusive à ce projet, si vous changez le nom du programme 'nouveau.c' pour un autre, ou la structure des dossiers du projet, la commande doit être modifiée manuellement en conséquence sinon elle ne fonctionnera plus...  
 
 -----
 
