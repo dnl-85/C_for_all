@@ -43,8 +43,35 @@ NOTE : dans le cas d'un nouveau projet, inutile de spécifier le suffixe du fich
 
     python3 make.py -start nouveau
 
-ceci va créer un programme 'nouveau.c' dans le répertoire courant, et l'ouvrir avec Nano.  
-le script 'make.py' peut être modifié et adapté au besoin de chacun.  
+ceci va créer un répertoire dans le répertoire courant contenant les divers fichiers .c et .h ainsi qu'une license MIT et un fichier README en markdown. les fichiers 'nouveau.c' et 'nouveau.h' vont s'ouvrir avec l'éditeur de code spécifié dans le script python (pour ma part ça sera Notepad++).   
+de plus, 'make.py' va se copier dans le projet afin de servir de fichier de compilation pour le développeur par la suite. bien sûr le script 'make.py' peut être modifié et adapté au besoin de chacun. cette commande aura pour effet de créer un dossier de travail avec un ensemble de sous-dossiers afin de structurer proprement le projet :  
+
+    nouveau/
+        |---- exe/
+        |---- inc/
+        |        +---- nouveau.h
+        |---- doc/
+        |        +---- LICENSE
+        |        +---- README.md
+        |---- src/
+        |        +---- nouveau.c
+        |---- pack/
+        + make.py
+        
+- le dossier 'exe/' va contenir les futurs compilations (exécutables) du projet.  
+- le dossier 'inc/' va contenir à minima le header .h du programme, et peut être modifié à la guise du développeur.  
+- le dossier 'doc/' va contenir à minima une license MIT avec le nom du login du pc du développeur et l'heure de création du projet ainsi que la documentation du programme.  
+- le dossier 'src/' va contenir à minima le programme .c, lui même contenant la fonction principale 'main'.  
+- le dossier 'pack/' va contenir une sauvegarde du projet, empaqueté dans une archive .zip, et ceci sera créé ou remis à jour à chaque compilation du projet.  
+- et pour finir 'make.py' contient le script de compilation, se basant sur gcc et mingw comme décrit au début de cet article.  
+
+concernant le script make.py : à chaque compilation, il va générer automatiquement une archive zip contenant l'intégralité du projet dans sa forme telle que d'écrite quelques lignes plus haut, et contenant bien sûr les exécutables dans le dossier exe/.  
+pour ça, il suffit de taper la commande :
+
+    python3 make.py -all nouveau.c
+    
+depuis un terminal pointant dans la racine du projet.  
+note : contrairement au script shell (voir description ci-dessous), ce script python n'est pas exclusif à ce projet. il faudra néanmoins respecter la structure des dossiers pour qu'il puisse fonctionner sans erreurs et sans omettre certaines parties du projet.  
 
 -----
 
